@@ -15,6 +15,10 @@ class Post_model extends CI_Model {
 		}
 	}
 	
+	function get_promo($data) {
+		return $this->db->get_where('Post', array('post_data_da <' => $data, 'post_data_a >' => $data));
+	}
+	
 	function get_post($post) {
 		$this->db->where('ID_post', $post);
 		$this->db->or_where('post_titolo', $post);

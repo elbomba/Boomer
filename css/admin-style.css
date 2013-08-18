@@ -536,10 +536,3 @@ table .square {
 	text-align: center;
 	width: 500px;
 }
-
-
-
-/*---------------------------------------------------------------------------------*/
-/*				Temporanei (da fare)				   */
-/*---------------------------------------------------------------------------------*/
-#newsletter-main-menu, #sms-main-menu, #calendario-main-menu {display:none;}

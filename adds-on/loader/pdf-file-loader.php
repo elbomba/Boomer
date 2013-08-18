@@ -58,7 +58,7 @@ if (isset($_POST)) {
             // Tolgo l'estensione dal nome
             $Name = preg_replace("/\.[^.\s]{3,4}$/", "", $PDFName);
             // Path del file
-            $Path = '/Boomer/media/pdf/'.$PDFName;
+            $Path = 'media/pdf/'.$PDFName;
             
             $sql = ("
                 INSERT INTO Media (media_nome, media_link, media_tipo)

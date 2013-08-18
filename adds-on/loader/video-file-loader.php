@@ -58,7 +58,7 @@ if (isset($_POST)) {
             // Tolgo l'estensione dal nome
             $Name = preg_replace("/\.[^.\s]{3,4}$/", "", $VideoName);
             // Path del file
-            $Path = '/Boomer/media/video/'.$VideoName;
+            $Path = 'media/video/'.$VideoName;
             
             $sql = ("
                 INSERT INTO Media (media_nome, media_link, media_tipo)

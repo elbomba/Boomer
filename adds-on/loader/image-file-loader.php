@@ -79,8 +79,8 @@ if (isset($_POST)) {
             // Tolgo l'estensione dal nome
             $Name = preg_replace("/\.[^.\s]{3,4}$/", "", $ImageName);
             // Path del file
-            $ThumbPath = '/Boomer/media/images/thumbs/'.$ThumbPrefix.$ImageName;
-            $Path = '/Boomer/media/images/'.$ImageName;
+            $ThumbPath = 'media/images/thumbs/'.$ThumbPrefix.$ImageName;
+            $Path = 'media/images/'.$ImageName;
             
             $sql = ("
                 INSERT INTO Media (media_nome, media_link, media_thumb_link, media_tipo)

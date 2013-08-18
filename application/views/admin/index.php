@@ -3,7 +3,7 @@
 
 <div id="statistiche_container">	
     <div class="main-title">
-        <?php echo img(array('src' => 'images/home.png')); ?>
+        <?php echo img(array('src' => 'adds-on/icons/home.png')); ?>
         <p>Home</p>
     </div>
     

@@ -89,9 +89,13 @@
 		<br>
 		<label for="contenuto" id="pagina_contenuto">Contenuto:</label><br>
 		<textarea name="contenuto"><?php echo set_value('contenuto'); ?></textarea>
-		<script>
-			CKEDITOR.replace('contenuto');
-		</script>
+		<?php
+			include_once('adds-on/ckeditor/ckeditor.php');
+		
+			$ckeditor = new CKEditor();
+			$ckeditor->basePath = base_url().'adds-on/ckeditor/';
+			$ckeditor->replace('contenuto');
+		?>
 		
 		<br>
 		<label for="script" id="pagina_script">Script</label><br>

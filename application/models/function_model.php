@@ -230,7 +230,7 @@ class Function_model extends CI_Model {
 		}
 	}
 	
-	function printPossiblePostsOptions($root_post, $nido, $possible_posts) {
+	function printPossiblePostsOptions($root_post, $nido, $possible_posts, $stamp="") {
 		//Variabile con nome da stampare
 		for ($i=0; $i<$nido; $i++) {
 			$stamp .= " - ";
@@ -372,8 +372,13 @@ class Function_model extends CI_Model {
 	}
 	
 	public function print_promo() {
-		$promo = $this->post_model->get_posts(4); // 4 is the prom category id
+		$data = date('Y-m-d');
+		$promo = $this->post_model->get_promo($data); //Promo attuali
+		if ($promo->num_rows() == 0) {
+			echo '<div class="element-title" style="text-align: center;">Nessuna Promozione al momento</div>';
+		}
 		foreach($promo->result() as $row) {
+			if ($row->post_data_da < 1) {}
 			echo '<div class="promo-element">';
 			echo '<div class="element-title">'.$row->post_titolo.'</div>';
 			echo '<div class="element-data">

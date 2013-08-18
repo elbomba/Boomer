@@ -11,7 +11,7 @@
 <html>
 <head>
 	<title><?php echo $title; ?></title>
-	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico" />
 	
 	<meta name="description" content="<?php echo description(); ?>" />
 	<meta name="keywords" content="<?php echo keywords(); ?>" />
@@ -38,6 +38,7 @@
 	}
     ?>
     
+    <div id="colored-line-header"></div>
     <header id="branding" role="banner">
 	<div id="top-line" class="header-line">
 		<div id="top-logo" class="logo">

@@ -14,7 +14,7 @@
 |   If not set it is the "boomer" theme
 |
 */
-$config['theme_name']= 'boomer';
+$config['theme_name']= 'boomer3';
 
 /*
 |--------------------------------------------------------------------------

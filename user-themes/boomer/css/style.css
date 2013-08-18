@@ -68,6 +68,7 @@ a:link, a:visited, a:hover, a:active {text-decoration: none; color: black;}
 html {background-color: #ffffff; min-width: 1000px;}
 #colored-line-header, #colored-line-footer, #main-container-colored, #homepage-top img, #homepage-top .slogan {min-width: 1000px;}
 .hfeed, .footer-container, header {width: 1000px; margin: auto;}
+#admin-line {display: none;}
 
 /*------------------------------------------------------------------
 /* Header Settings

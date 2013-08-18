@@ -69,6 +69,7 @@ html {background: url('../images/back.png'); min-width: 1000px; min-height: 700p
 #homepage-top .slogan {min-width: 1000px;}
 .hfeed, .footer-container, header {width: 1000px; margin: auto;}
 #main {min-height: 244px;}
+#admin-line {display: none;}
 
 /*------------------------------------------------------------------
 /* Header Settings

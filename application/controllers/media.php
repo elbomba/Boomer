@@ -16,8 +16,10 @@ class Media extends CI_Controller {
 		}
 		
 		if (isset($_GET['tipo'])) {
+			$tipo = $_GET['tipo'];
 			$data['tipo'] = $_GET['tipo'];
 		} else {
+			$tipo = "";
 			$data['tipo'] = "";
 		}
 		
@@ -25,7 +27,7 @@ class Media extends CI_Controller {
 		$data['message'] = $this->session->flashdata('message');
 		$data['printMessage'] = $this->function_model->printMessage();
 		
-		switch ($_GET['tipo']) {
+		switch ($tipo) {
 			case "":
 				$this->load->view('templates/admin-header', $data);
 				$this->load->view('templates/admin-menu');
