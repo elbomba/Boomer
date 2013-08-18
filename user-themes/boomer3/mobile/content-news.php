@@ -77,25 +77,25 @@
             if ($("html").css("margin-left") != "0px") {
                 //Rimuovo le classi
                 $(".news-menu").removeClass('show-menu');
-                $("html").removeClass('hide-html');
+                $("html, footer").removeClass('hide-html');
                 $("header").removeClass('hide-header');
                 $(".more").removeClass('move-more');
                 
                 //Nascondo
                 $(".news-menu").addClass('hide-menu');
-                $("html").addClass('show-html');
+                $("html, footer").addClass('show-html');
                 $("header").addClass('show-header');
                 $(".more").addClass('show-more');
             } else {
                 //Rimuovo le classi
                 $(".news-menu").removeClass('hide-menu');
-                $("html").removeClass('show-html');
+                $("html, footer").removeClass('show-html');
                 $("header").removeClass('show-header');
                 $(".more").removeClass('show-more');
                 
                 //Mostro
                 $(".news-menu").addClass('show-menu');
-                $("html").addClass('hide-html');
+                $("html, footer").addClass('hide-html');
                 $("header").addClass('hide-header');
                 $(".more").addClass('move-more');
             }

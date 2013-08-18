@@ -127,8 +127,6 @@ class Home extends CI_Controller {
                 }
             }
             
-            //$isMobile = true;
-            
             if ($isMobile && !$this->session->userdata('desktop_to_mobile')) {
                 if ($cat == 'Homepage') {
                     $data['title'] = site_name();
