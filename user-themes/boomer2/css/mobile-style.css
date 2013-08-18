@@ -1,0 +1,360 @@
+/*
+The Name: boomer
+Author: Davide Bombardier
+Description: A Base Theme for Boomer website
+Version: 1.0
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	color: #404040;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	width: 900px;
+        margin: auto;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a:link, a:visited, a:hover, a:active {text-decoration: none; color: black;}
+
+/*------------------------------------------------------------------
+/* General Style
+/*------------------------------------------------------------------
+*/
+html {background: url('../images/back.png');}
+#main {margin-top: 120px;}
+
+/* Animazione */
+@keyframes show {
+    0% {width: 0%;}
+    100% {width: 600px;}
+}
+@-webkit-keyframes show {
+    0% {width: 0%;}
+    100% {width: 600px;}
+}
+@keyframes hide {
+    0% {width: 600px;}
+    100% {width: 0%;}
+}
+@-webkit-keyframes hide {
+    0% {width: 600px;}
+    100% {width: 0%;}
+}
+
+@keyframes hide-header {
+    0% {left: 0;}
+    100% {left: -600px;}
+}
+@-webkit-keyframes hide-header {
+    0% {left: 0;}
+    100% {left: -600px;}
+}
+@keyframes show-header {
+    0% {left: -600px;}
+    100% {left: 0px;}
+}
+@-webkit-keyframes show-header {
+    0% {left: -600px;}
+    100% {left: 0px;}
+}
+
+@keyframes hide-html {
+    0% {margin-left: 0px;}
+    100% {margin-left: -900px;}
+}
+@-webkit-keyframes hide-html {
+    0% {margin-left: 0px;}
+    100% {margin-left: -900px;}
+}
+@keyframes show-html {
+    0% {margin-left: -900px;}
+    100% {margin-left: 0px;}
+}
+@-webkit-keyframes show-html {
+    0% {margin-left: -900px;}
+    100% {margin-left: 0px;}
+}
+
+@keyframes move-more {
+    0% {right: 10px;}
+    100% {right: 610px;}
+}
+@-webkit-keyframes move-more {
+    0% {right: 10px;}
+    100% {right: 610px;}
+}
+@keyframes show-more {
+    0% {right: 610px;}
+    100% {right: 10px;}
+}
+@-webkit-keyframes show-more {
+    0% {right: 610px;}
+    100% {right: 10px;}
+}
+@keyframes hide-logo {
+    0% {left: 10px;}
+    100% {left: -600px;}
+}
+@-webkit-keyframes show-logo {
+    0% {left: -600px;}
+    100% {left: 10px;}
+}
+
+
+/*------------------------------------------------------------------
+/* Header Style
+/*------------------------------------------------------------------
+*/
+header {position: fixed; top:0; left: 0; height:100px; width: 100%;}
+.menu {
+    text-align: center;
+    border-bottom: 2px solid #888;
+    box-shadow: 0 1px 5px;
+    -moz-box-shadow: 0 1px 5px;
+    -webkit-box-shadow: 0 1px 5px;
+    background-color: #ccc;
+    padding: 0px 200px;
+    
+}
+.menu div {font-size: 35px;}
+.menu .menu-item {
+    width: 200px;
+    height: 90px;
+    /* Internet Explorer 10 */
+    display:-ms-inline-flexbox;
+    -ms-flex-pack:center;
+    -ms-flex-align:center;
+
+    /* Firefox */
+    display:-moz-inline-box;
+    -moz-box-pack: center;
+    -moz-box-align:center;
+
+    /* Safari, Chrome, and Opera */
+    display:-webkit-inline-box;
+    -webkit-box-pack: center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:inline-box;
+    box-pack: center;
+    box-align:center;
+}
+.more {
+    position: fixed;
+    top: 10;
+    right: 10;
+    cursor: pointer;
+}
+.more img {width: 64px;}
+.logo-img {position: fixed; top: 20px; left: 20px;}
+
+/*------------------------------------------------------------------
+/* Footer Style
+/*------------------------------------------------------------------
+*/
+#colored-line-footer {position: absolute; width: 100%; height: 200px; left: 0; margin-top: 50px; background-color: #404040;}
+footer {position: absolute; margin-top: 50px;}
+.footer-container {margin: auto; width: 900px; text-align: center;}
+.colophon {color: white; font-size: 13px; text-align: center;}
+.social {margin: 10px 10px 20px 10px;}
+.social a {margin: 0 10px;}
+.social a img {width: 64px;}
+.mobile-desk {margin-top:20px;}
+.mobile-desk a  {color:white; font-size: 20px;}
+.absolute-footer {position: absolute; bottom: 0;}
+.absolute-line-footer {position: absolute; bottom: 0;}
+
+/*------------------------------------------------------------------
+/* Homepage Style
+/*------------------------------------------------------------------
+*/
+#top-logo {display: -webkit-inline-box; width: 100%;
+    /* Internet Explorer 10 */
+    display:-ms-inline-flexbox;
+    -ms-flex-pack:center;
+
+    /* Firefox */
+    display:-moz-inline-box;
+    -moz-box-pack: center;
+
+    /* Safari, Chrome, and Opera */
+    display:-webkit-inline-box;
+    -webkit-box-pack: center;
+
+    /* W3C */
+    display:inline-box;
+    box-pack: center;
+}
+#top-logo .slogan {
+    font-size: 40px;
+    margin-top: 25px;
+    text-shadow: 1px 1px 5px #ccc;
+    /* Internet Explorer 10 */
+    display:-ms-flexbox;
+    -ms-flex-align:center;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-align: center;
+
+    /* Safari, Chrome, and Opera */
+    display:-webkit-box;
+    -webkit-box-align: center;
+
+    /* W3C */
+    display:box;
+    box-align: center;
+}
+
+.homepage-content {margin: 75px 0px 0px 0px;
+    /* Internet Explorer 10 */
+    display:-ms-flexbox;
+    -ms-flex-pack:center;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack: center;
+
+    /* Safari, Chrome, and Opera */
+    display:-webkit-box;
+    -webkit-box-pack: center;
+
+    /* W3C */
+    display: box;
+    box-pack: center;
+}
+.circle-line a {text-align: center;}
+.circle {margin-bottom: 75px;}
+.circle-line a .desc {font-size: 25px;}
+
+/*------------------------------------------------------------------
+/* General Style
+/*------------------------------------------------------------------
+*/
+.position {text-align: center; font-size: 25px; margin-bottom: 25px;}
+.content {}
+.content .titolo {font-size: 30px; text-align: center;}
+.content .text {min-height: 670px;}
+.content .text p {font-size: 16px;}
+.script-post {}
+
+/*------------------------------------------------------------------
+/* Lateral Menu Style
+/*------------------------------------------------------------------
+*/
+.news-menu, .promo-menu {
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #404040;
+    box-shadow: -1px 0px 10px;
+    -moz-box-shadow: -1px 0px 10px;
+    -webkit-box-shadow: -1px 0px 10px;
+}
+.show-menu {
+    animation: show 1s;
+    -webkit-animation: show 1s;
+    width: 600px;
+}
+.hide-menu {
+    animation: hide 1s;
+    -webkit-animation: hide 1s;
+    width: 0px;
+}
+.hide-html {
+    animation: hide-html 1s;
+    -webkit-animation: hide-html 1s;
+    margin-left: -900px;
+}
+.show-html {
+    animation: show-html 1s;
+    -webkit-animation: show-html 1s;
+    margin-left: 0px;
+}
+.hide-header {
+    animation: hide-header 1s;
+    -webkit-animation: hide-header 1s;
+    left: -600px;
+}
+.show-header {
+    animation: show-header 1s;
+    -webkit-animation: show-header 1s;
+    left: 0px;
+}
+.move-more{
+    animation: move-more 1s;
+    -webkit-animation: move-more 1s;
+    right: 610px;
+}
+.show-more{
+    animation: show-more 1s;
+    -webkit-animation: show-more 1s;
+    right: 10px;
+}
+.hide-logo {
+    animation: hide-logo 1s;
+    -webkit-animation: hide-logo 1s;
+    left: -600px;
+}
+.show-logo {
+    animation: show-logo 1s;
+    -webkit-animation: show-logo 1s;
+    left: 10px;
+}
+.news-menu .title, .promo-menu .title {
+    color: white; font-size: 35px; margin: 20px;
+}
+.news-element, .promo-element {padding: 0 10px 15px 10px; margin: 0 10px 10px 10px; border-bottom: 1px solid #ccc;}
+.element-title, .promo-element .element-title {font-size: 30px; color: white;}
+.element-data {color: white; font-size: 15px;}
+.element-content {margin: 10px 0 0 0; max-height: 100px; overflow: hidden; text-overflow: ellipsis;}
+.element-content p {color: white; font-size: 22px;}

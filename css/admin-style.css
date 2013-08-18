@@ -1,0 +1,545 @@
+html {
+	font-family: Helvetica Neue, Arial, sans-serif;
+	font-size: 12px;
+	width: 100%;
+	height: 100%;
+}
+#container {
+	min-width:1200px;
+	min-height:700px;
+	width:100%;
+	height:100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-color: #333;
+}
+
+#main {
+	width: 80%;
+	min-height: 500px;
+	margin: auto;
+	position: absolute;
+	top: 180px;
+	right: 0;
+	background-color: white;
+	box-shadow: -1px -1px 10px #bbb, inset 0px 1px 50px #ddd;
+	overflow: auto;
+}
+
+#login_form {
+	position: absolute;
+	color: white;
+	top: 50%;
+	left: 50%;
+	width: 330px;
+	height: 156px;
+	margin-left: -165px;
+	margin-top: -78px;
+}
+#login_form input[type="submit"] {
+	margin-left: 105px;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*								HEADER TOP STYLE								   */
+/*---------------------------------------------------------------------------------*/
+#top-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #222;
+	box-shadow: 0px 1px 25px #000;
+}
+.logo {
+	position: absolute;
+	top: 12;
+	left: 25;
+	font-size: 25px;
+	font-weight: bolder;
+	color: #ddd;
+	cursor: default; /*Pointer quando punterà al sito web */
+}
+.logout a {
+	position: absolute;
+	right: 25;
+	top: 15;
+	font-size: 18px;
+	cursor: pointer;
+}
+.logout a:hover,
+.logout a:link,
+.logout a:visited,
+.logout a:active {
+	color: #ddd;
+	text-decoration: none;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*									TOP LINE STYLE								   */
+/*---------------------------------------------------------------------------------*/
+#info-line {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+}
+/* Per la versione con il riepilogo delle statistiche nell'header
+.username {
+	position: absolute;
+	top: 30px;
+	left: 10%;
+	font-size: 18px;
+	color: #ddd;
+}
+*/
+.username {
+	position: absolute;
+	top: 50px;
+	right: 2%;
+	font-size: 18px;
+	color: #ddd;
+}
+.stats {
+	float: left;
+	position: absolute;
+	width: 600px;
+	left: 75%;
+	margin-left: -300px;
+}
+.top-stat {
+	float: left;
+	width: 200px;
+	text-align: center;
+}
+.top-stat .num {
+	font-size: 25px;
+	margin: 10px 0 0 0;
+	font-weight: bolder;
+	color: #ddd;
+}
+.top-stat .desc {
+	font-size: 15px;
+	margin: 5px;
+	color: #777;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*								ADMIN MENU STYLE								   */
+/*---------------------------------------------------------------------------------*/
+#admin-lateral-menu {
+	position: absolute;
+	top: 180px;
+	right: 80%;
+	font-size: 14px;
+	font-weight: bold;
+}
+#admin-lateral-menu a:hover,
+#admin-lateral-menu a:link,
+#admin-lateral-menu a:visited,
+#admin-lateral-menu a:active {
+	color:black; text-decoration:none; cursor:pointer;
+}
+.admin-menu-item {
+	width: 200px;
+	height: 40px;
+	border-bottom: 1px solid #bbbbbb;
+	border-left: 1px solid #bbbbbb;
+	background-color: white;
+	color: black;
+	margin:auto;
+	
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+
+	/* Safari, Chrome, and Opera */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;
+	
+	float: right;
+	cursor: pointer;
+}
+.menu-name {
+	width: 180px;
+	height: 25px;
+	padding: 12px 0px 3px 20px;
+}
+.menu-image {
+	margin-left: -35;
+	width: 25px;
+}
+.selected-item{
+	background: url(../adds-on/icons/back-menu-sel.png) no-repeat;
+	margin-top: -10px !important;
+	background-attachment: scroll;
+	background-position: -42px -12px;
+	background-clip: border-box;
+	background-color: transparent !important;
+	background-size: 246px 93px;
+	border-top: 14px solid transparent;
+	border-left: 46px solid transparent !important;
+	border-bottom: 40px solid transparent !important;
+}
+.selected-item+.admin-menu-item {
+	margin-top: -34px;
+}
+.selected-item .menu-name {
+	color: #dddddd;
+	height: 40px;
+}
+.selected-item .menu-image {
+	width: 35px;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*									SUB MENU STYLE								   */
+/*---------------------------------------------------------------------------------*/
+.sub-menu {
+	position: absolute;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #aaa;
+	background-color: #dddddd;
+	display:none;
+	height: 50px;
+	top: 130px;
+	left: 20%;
+}
+.sub-menu a:hover,
+.sub-menu a:link,
+.sub-menu a:visited,
+.sub-menu a:active {
+	color: black;
+	text-decoration: none;
+}
+.admin-sub-menu-item {
+	width: 111px;
+	float: left;
+	padding: 15px 10px 0px 10px;
+	height: 35px;
+	border-right: 1px solid black;
+	cursor: pointer;
+}
+.selected-sub {
+	display: block;
+}
+.sub-menu .selected {
+	background-color: white;
+	padding: 25px 20px 0px 20px;
+	margin-top: -10px;
+	box-shadow:0px 0px 10px white;
+	background-image: url(../adds-on/icons/back-top-menu-sel.png);
+	background-size: 100% 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 0px;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*									MAIN PAGE STYLE								   */
+/*---------------------------------------------------------------------------------*/
+#page {
+	clear: both;
+	margin: auto;
+	margin:10px 10px 10px 10px;
+}
+.main-title {
+	font-size: 30px;
+	padding: 10px 0px 0px 25px;
+	text-shadow: 1px 1px 5px #aaa;
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-align:center;
+
+	/* Safari, Chrome, and Opera */
+	display:-webkit-box;
+	-webkit-box-align:center;
+
+	/* W3C */
+	display:box;
+	box-align:center;
+}
+.main-title img {
+	width: 35px;
+}
+.main-title p {
+	margin: 0px;
+}
+.refine {
+	margin: 10px 0px 10px 15px;
+}
+.refine a:hover,
+.refine a:link,
+.refine a:active,
+.refine a:visited {
+	color: black; text-decoration: none;
+}
+.refine .selected {
+	font-weight: bold;
+	font-size: 13px;
+}
+.home-content {
+	margin: 20px 0 0 10px;
+}
+
+
+/*---------------------------------------------------------------------------------*/
+/*									CONTENT TABLE STYLE							   */
+/*---------------------------------------------------------------------------------*/
+table {width: 100%; border-spacing: 0px; font-size: 12px;}
+.headers td {font-weight: bold; font-size: 15px; background-color: #ddd; height: 35px;}
+.headers td:first-of-type {border-top-left-radius: 5px;}
+.headers td:last-of-type {border-top-right-radius: 5px;}
+.cat_element td, .menu-element td, .post-element td, .user-element td, .media-element td {
+	border-bottom:1px solid black;
+}
+.icon img {height:25px;}
+.del-icon img {
+	height: 18px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+.mod-icon img {
+	height: 20px;
+	float: left;
+	margin-right: 5px;
+}
+
+fieldset {border: 0px;}
+fieldset .edit-line {margin: 10px 0px 10px 0px;}
+fieldset h2 {margin-left: 50px;}
+fieldset .label {width: 200px; float: left; margin-top: 6px;}
+fieldset input, select {width:250px; padding: 3px;}
+fieldset input[type="submit"] {
+	margin: 20px 0px 0px 0px;
+	width: 100px;
+}
+input[type="checkbox"] {
+	width:12px;
+}
+
+.media-preview {width: 64px;}
+.clickable {cursor: pointer;}
+
+.show-image-dialog .ui-dialog-titlebar {
+	border:0px;
+	background:none;
+}
+#show-image {
+	text-align:center;
+}
+#show-image img {max-height:500px; max-width:800px}
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*									MENU PAGE STYLE							   */
+/*---------------------------------------------------------------------------------*/
+.menu-explain {margin: 20px 0px 20px 15px;}
+.nome-menu {margin: 20px 0px 10px 50px;}
+.desc-menu {margin: 0px 0px 20px 25px;}
+.desc-menu p {font-weight: bold; margin:0px; padding:0px;}
+.menu-back-link {
+	background: url(../adds-on/icons/back.png) no-repeat 100% transparent;
+	background-size: 13px;
+	background-position: -3px 0px;
+	padding-left: 10px;
+	margin-left: 5px;
+}
+.menu-mod-link {
+	background: url(../adds-on/icons/pencil.png) no-repeat 100% transparent;
+	background-size: 13px;
+	background-position: 0px 0px;
+	padding: 0px 0px 0px 15px;
+}
+.menu-del-link {
+	background: url(../adds-on/icons/delete.png) no-repeat 100% transparent;
+	background-size: 13px;
+	background-position: 0px 0px;
+	padding: 0px 0px 0px 15px;
+}
+.nome-menu strong {font-size: 14px; font-weight: bold;}
+.menu {
+	width: 300px;
+	height: 75px;
+	margin: 0px 10px 10px 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding: 5px;
+	overflow: hidden;
+	float: left;
+}
+#menus a:hover, #modifica_voce_form .back a:hover,
+#menus a:active, #modifica_voce_form .back a:active,
+#menus a:visited, #modifica_voce_form .back a:visited,
+#menus a:link, #modifica_voce_form .back a:link {
+	color: black;
+	text-decoration: none;
+}
+.menu .menu-nome {
+	margin: 0px 0px 5px 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#nuovo_menu_form textarea, #modifica_menu_form textarea {width: 250px; height: 75px;}
+.back {float: left;}
+.modifica, .elimina {
+	float: left;
+	margin: 0px 0px 10px 10px;
+	padding-left: 10px;
+	border-left: 1px solid black;
+}
+#modifica_voce_form .back {margin-top: 20px;}
+#modifica_voce_form fieldset {clear: both;}
+
+.menus-none, .categorie-none, .utenti-none, .post-none, .media-none {margin: 20px 0px 0px 20px;}
+
+
+/*---------------------------------------------------------------------------------*/
+/*				LOADER STYLE					   */
+/*---------------------------------------------------------------------------------*/
+#progressbox {
+	border: 1px solid #0099cc;
+	padding: 1px;
+	position: relative;
+        width: 400px;
+        border-radius: 3px;
+        margin: 10px;
+        display: none;
+        text-align: left;
+}
+#progressbar {
+        height: 20px;
+        border-radius: 3px;
+        background-color: #003333;
+        width: 1%;
+}
+#statustxt {
+        top: 3px;
+        left: 50%;
+        position: absolute;
+        display: inline-block;
+        color: #000000;
+}
+#output .linea {
+        clear: both;
+	padding-top: 5px;
+}
+#output .linea img {
+	float: left;
+}
+#output .linea p {
+        float: left;
+        margin-left: 10px;
+}
+
+
+/*---------------------------------------------------------------------------------*/
+/*				GENERAL MENU VOICE STYLE			   */
+/*---------------------------------------------------------------------------------*/
+#edit-categoria .label, #nuova-categoria .label {width: 250px;}
+
+textarea {
+	width:100%; height:200px;
+}
+
+.cke_contents {height:500px !important;}
+
+
+/*---------------------------------------------------------------------------------*/
+/*				STATISTICHE STYLE				   */
+/*---------------------------------------------------------------------------------*/
+.riepilogo-statistiche p {
+	margin: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#loader {
+	background: url('../adds-on/icons/loading.gif') no-repeat 50%;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	width: 16px;
+	height: 16px;
+	margin: -8px 0 0 -8px;
+}
+.stat-element {
+	width: 200px;
+	clear: both;
+}
+.stat-element canvas {
+	float: left;
+}
+.stat-element .title {
+	margin-left: 10px;
+	font-size: 13px;
+	font-weight: bold;
+}
+.stat-element .text {
+	float: left;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: -20px;
+}
+.element .square, table .square {
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 2px 5px 5px 0;
+}
+table .square {
+	margin: 0 0 0 28px;
+}
+#legenda {margin-top: 5px;}
+#new-square {
+	background-color: #06C;
+}
+#old-square {
+	background-color: #093;
+}
+#legenda .element {
+	clear: both;
+}
+#legenda .cont {
+	float: left;
+}
+#pie {
+	position: absolute;
+	left: 300px;
+	top: 115px;
+}
+.stat-table {
+	width: 500px;
+	float: left;
+}
+.pie-cont, .pie {float: left;}
+.pie {margin-left: 50px;}
+.title-table {
+	clear: both;
+	margin: 10px 0 10px 0;
+	font-size: 18px;
+	text-align: center;
+	width: 500px;
+}
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*				Temporanei (da fare)				   */
+/*---------------------------------------------------------------------------------*/
+#newsletter-main-menu, #sms-main-menu, #calendario-main-menu {display:none;}
